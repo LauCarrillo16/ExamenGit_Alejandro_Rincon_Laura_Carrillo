@@ -40,13 +40,13 @@ def menuMostrar():
             if opcion == 1:
                 Ver_Todas_las_Ciudades()
             elif opcion == 2:
-                Ver_Por_Ciudad()
+                Ver_por_Ciudad()
             elif opcion == 3:
                 ()
             elif opcion == 4:
-                ()
+                Ver_por_pais()
             elif opcion == 5:
-                ()
+                Ver_por_Codepostale()
             elif opcion == 6:
                 print("Volver al Menu Principal")
                 menuPrincipal()
