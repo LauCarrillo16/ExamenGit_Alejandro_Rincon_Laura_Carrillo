@@ -22,9 +22,6 @@ def cargar_datos(Ruta_JSON, Datos):
     except Exception as e:
         print(f"Error al cargar Datos {e}")
 
-
-
-
 def Registro_dict():
     cargar_datos(Ruta_JSON_Ciudades, Ciudades)
     print("""
