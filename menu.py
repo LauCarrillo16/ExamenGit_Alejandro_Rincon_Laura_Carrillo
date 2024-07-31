@@ -42,7 +42,7 @@ def menuMostrar():
             elif opcion == 2:
                 Ver_por_Ciudad()
             elif opcion == 3:
-                ()
+                Buscar_por_Poblacion()
             elif opcion == 4:
                 Ver_por_pais()
             elif opcion == 5:
