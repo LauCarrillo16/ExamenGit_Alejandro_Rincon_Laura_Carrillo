@@ -48,5 +48,3 @@ def Registro_dict():
         print("Codigo Registrado Anteriormente")
 
 
-
-Registro_dict()
