@@ -32,10 +32,10 @@ def Registro_dict():
                         Registro de Ciudad Nueva
                     ***********************************
                     """)
-            pais = input("Ingrese Pais a Corregir")
+            pais = input("Ingrese Pais ")
             Pais= pais.lower()
-            ciudad = input("Ingrese Nombre de Ciudad nuevo")
-            Ciudad = ciudad.lower
+            ciudad = input("Ingrese Nombre de Ciudad ")
+            Ciudad = ciudad.lower()
             Codigo_postal = input("Ingrese el codigo postal:  ")
             if Ciudades.get(Codigo_postal,None)== None:
                 Ciudades[Codigo_postal]={}
@@ -69,7 +69,7 @@ def Modificar_Datos():
                 pais = input("Ingrese Pais a Corregir")
                 Pais= pais.lower()
                 ciudad = input("Ingrese Nombre de Ciudad nuevo")
-                Ciudad = ciudad.lower
+                Ciudad = ciudad.lower()
                 Ciudades[Codigo_postal]["Nombre"] = Ciudad
                 Ciudades[Codigo_postal]["Poblacion"] = int(input("Ingrese el Nueva Poblacion"))
                 Ciudades[Codigo_postal]["Pais"] = Pais
@@ -102,4 +102,85 @@ def Ver_Todas_las_Ciudades():
 
         
 
+
+def Ver_por_pais():
+    while True:
+        try:
+            cargar_datos(Ruta_JSON_Ciudades, Ciudades)
+            print("""
+                    ***********************************
+                                Ver Por Pais
+                    ***********************************
+                    """)
+            pais = input("Pais a Buscar:   ")
+            Pais= pais.lower()
+            for llave, valor in Ciudades.items():
+                if valor.get("Pais") == Pais:
+                    print(f"""
+                        Ciudad: {valor.get("Nombre")}
+
+                        Codigo Postal: {llave}
+                        Pais: {valor.get("Pais")}
+                        Poblacion: {valor.get("Poblacion")}
+                        """)
+            
+                else:
+                    print("No registra")
+            return
+        except Exception as e:
+            print(f"Error Causado por {e}")
+
+
+def Ver_por_Ciudad():
+    while True:
+        try:
+            cargar_datos(Ruta_JSON_Ciudades, Ciudades)
+            print("""
+                    ***********************************
+                                Ver Por Ciudad
+                    ***********************************
+                    """)
+            ciudad = input("Ingrese el  Nombre de la ciudad:  ")
+            Ciudad = ciudad.lower()
+            for llave, valor in Ciudades.items():
+                if valor.get("Nombre") == Ciudad:
+                    print(f"""
+                        Ciudad: {valor.get("Nombre")}
+
+                        Codigo Postal: {llave}
+                        Pais: {valor.get("Pais")}
+                        Poblacion: {valor.get("Poblacion")}
+                        """)
+                else:
+                    print("No registra")
+            return
+                    
+        except Exception as e:
+            print(f"Error Causado por {e}")
+
+def Ver_por_Codepostale():
+    while True:
+        try:
+            cargar_datos(Ruta_JSON_Ciudades, Ciudades)
+            print("""
+                    ***********************************
+                                Ver Por Codigo
+                    ***********************************
+                    """)
+            Codigo_postal = input("Ingrese el codigo postal:  ")
+            for llave, valor in Ciudades.items():
+                if llave == Codigo_postal:
+                    print(f"""
+                        Ciudad: {valor.get("Nombre")}
+
+                        Codigo Postal: {llave}
+                        Pais: {valor.get("Pais")}
+                        Poblacion: {valor.get("Poblacion")}
+                        """)
+                else:
+                    print("No registra")
+            return
+                    
+        except Exception as e:
+            print(f"Error Causado por {e}")
 
