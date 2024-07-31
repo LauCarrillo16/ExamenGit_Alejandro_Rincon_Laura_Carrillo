@@ -27,6 +27,7 @@ Este sistema permite registrar ciudades ingresando ::
 - Codigo postal
 - Población
 - Pais
+  
 Permite mostrar por ::
 - Nombre de la ciudad
 - Población
