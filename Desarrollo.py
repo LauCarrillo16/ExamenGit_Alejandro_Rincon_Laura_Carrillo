@@ -32,13 +32,17 @@ def Registro_dict():
                         Registro de Ciudad Nueva
                     ***********************************
                     """)
+            pais = input("Ingrese Pais a Corregir")
+            Pais= pais.lower()
+            ciudad = input("Ingrese Nombre de Ciudad nuevo")
+            Ciudad = ciudad.lower
             Codigo_postal = input("Ingrese el codigo postal:  ")
             if Ciudades.get(Codigo_postal,None)== None:
                 Ciudades[Codigo_postal]={}
                 info_ciudad = {
-                    "Nombre":input("Ingrese el Nombre de la Ciudad"),
+                    "Nombre":Ciudad,
                     "Poblacion": int(input("Ingrese el Nueva Poblacion")),
-                    "Pais":input("Ingrese el Nombre del PAIS")
+                    "Pais":Pais
                 }
                 Ciudades[Codigo_postal] = info_ciudad
                 guardar_datos(Ruta_JSON_Ciudades, Ciudades)
@@ -63,10 +67,12 @@ def Modificar_Datos():
             Codigo_postal = input("Ingrese el codigo postal:  ")
             if Ciudades.get(Codigo_postal,None)!= None:
                 pais = input("Ingrese Pais a Corregir")
+                Pais= pais.lower()
                 ciudad = input("Ingrese Nombre de Ciudad nuevo")
-                Ciudades[Codigo_postal]["Nombre"] = ciudad
+                Ciudad = ciudad.lower
+                Ciudades[Codigo_postal]["Nombre"] = Ciudad
                 Ciudades[Codigo_postal]["Poblacion"] = int(input("Ingrese el Nueva Poblacion"))
-                Ciudades[Codigo_postal]["Pais"] = pais
+                Ciudades[Codigo_postal]["Pais"] = Pais
                 guardar_datos(Ruta_JSON_Ciudades, Ciudades)
                 return
         except Exception as e:
@@ -92,5 +98,8 @@ def Ver_Todas_las_Ciudades():
             return
         except Exception as e:
                     print(f"Error Causado por {e}")
+
+
+        
 
 
