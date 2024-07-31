@@ -8,5 +8,20 @@
         "Nombre": "bucaramanga",
         "Poblacion": 409993887,
         "Pais": "colombia"
+    },
+    "12343": {
+        "Nombre": "madrid",
+        "Poblacion": 4000000000000,
+        "Pais": "espana"
+    },
+    "12344": {
+        "Nombre": "miami",
+        "Poblacion": 5000000,
+        "Pais": "usa"
+    },
+    "23456": {
+        "Nombre": "cali",
+        "Poblacion": 1000,
+        "Pais": "colombia"
     }
 }

@@ -21,8 +21,7 @@ def menuPrincipal():
                 print("Saliendo del Programa")
                 break
         except Exception as e:
-            print("Opcion invalida")
-            
+            print(f"Opcion invalida {e}")
 
 def menuMostrar():
     while True:
@@ -49,7 +48,7 @@ def menuMostrar():
                 Ver_por_Codepostale()
             elif opcion == 6:
                 print("Volver al Menu Principal")
-                menuPrincipal()
+                return
         except Exception as e:
-            print("Opcion invalida")
+            print(f"Opcion invalida {e}")
 
