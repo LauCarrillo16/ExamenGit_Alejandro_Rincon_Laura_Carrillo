@@ -184,3 +184,58 @@ def Ver_por_Codepostale():
         except Exception as e:
             print(f"Error Causado por {e}")
 
+
+def Buscar_por_Poblacion():
+    while True:
+        try:
+            cargar_datos(Ruta_JSON_Ciudades, Ciudades)
+            print("""
+                    ***********************************
+                            Ver Por Poblacion
+                    ***********************************
+                    """)
+            print("""
+                    1. Para menores a un millon
+                    2. Para menores de 10 millones pero mayores a un millon
+                    3. Para Mayores de 10 millones
+                    """)
+            info = input("Ingrese el numeor deseado:  ")
+            if info == "1":
+                for llave, valor in Ciudades.items():
+                    if valor.get("Poblacion") <= 1000000:
+
+                        print(f"""
+                            Ciudad: {valor.get("Nombre")}
+
+                            Codigo Postal: {llave}
+                            Pais: {valor.get("Pais")}
+                            Poblacion: {valor.get("Poblacion")}
+                            """)
+            if info == "2":
+                for llave, valor in Ciudades.items():
+                    if valor.get("Poblacion") <= 10000000 and valor.get("Poblacion") >=1000000:
+                        print(f"""
+                            Ciudad: {valor.get("Nombre")}
+
+                            Codigo Postal: {llave}
+                            Pais: {valor.get("Pais")}
+                            Poblacion: {valor.get("Poblacion")}
+                            """)
+            if info == "3":
+                for llave, valor in Ciudades.items():
+                    if valor.get("Poblacion") >= 10000000:
+
+                        print(f"""
+                            Ciudad: {valor.get("Nombre")}
+
+                            Codigo Postal: {llave}
+                            Pais: {valor.get("Pais")}
+                            Poblacion: {valor.get("Poblacion")}
+                            """)
+            return
+            
+            
+                    
+        except Exception as e:
+            print(f"Error Causado por {e}")
+

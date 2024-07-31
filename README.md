@@ -24,3 +24,14 @@ Navega por el menu libremente
 ## Explicación
 Este sistema permite registrar ciudades ingresando ::
 - Nombre de la ciudad
+- Codigo postal
+- Población
+- Pais
+Permite mostrar por ::
+- Nombre de la ciudad
+- Población
+- Codigo Postal
+- Pais
+
+## Lenguaje
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
